@@ -43,7 +43,7 @@ public class NameParser {
         String names = "";
         boolean von = false;
         for(String item:list){
-            if(item.contentEquals("von") || item.contentEquals("van")){
+            if(item.contentEquals("von") || item.contentEquals("van") || item.contentEquals("vom")){
                 von = true;
             }
             if(von){
