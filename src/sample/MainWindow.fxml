@@ -8,11 +8,12 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane alignment="center" hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="720.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainWindowController">
+<GridPane fx:id="MainWindow" alignment="center" hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="720.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainWindowController">
    <columnConstraints>
       <ColumnConstraints />
-      <ColumnConstraints halignment="CENTER" maxWidth="160.0" minWidth="10.0" prefWidth="140.0" />
-      <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="574.0" minWidth="520.0" prefWidth="540.0" />
+      <ColumnConstraints halignment="CENTER" maxWidth="160.0" minWidth="10.0" prefWidth="123.0" />
+      <ColumnConstraints hgrow="ALWAYS" maxWidth="986.0" minWidth="458.0" prefWidth="458.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
       <ColumnConstraints />
       <ColumnConstraints />
    </columnConstraints>
@@ -29,28 +30,29 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" />
       <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
       <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
    </rowConstraints>
    <children>
-      <TextField fx:id="input" onAction="#umwandeln" prefHeight="39.0" prefWidth="262.0" promptText="Bitte Kontakt mit Anrede eingeben" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-      <Button fx:id="btnUmwandeln" mnemonicParsing="false" onAction="#umwandeln" prefHeight="39.0" prefWidth="124.0" text="Umwandeln" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+      <TextField fx:id="input" onAction="#umwandeln" prefHeight="39.0" prefWidth="262.0" promptText="Bitte Kontakt mit Anrede eingeben" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+      <Button fx:id="btnUmwandeln" mnemonicParsing="false" onAction="#umwandeln" prefHeight="39.0" prefWidth="124.0" text="Umwandeln" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2" />
       <Label text="Nachname" GridPane.columnIndex="1" GridPane.rowIndex="4" />
       <Label text="Vorname" GridPane.columnIndex="1" GridPane.rowIndex="5" />
       <Label text="Geschlecht (m/w/x)" GridPane.columnIndex="1" GridPane.rowIndex="6" />
       <Label text="Titel" GridPane.columnIndex="1" GridPane.rowIndex="7" />
       <Label text="Anrede" GridPane.columnIndex="1" GridPane.rowIndex="8" />
       <Label text="Briefanrede" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-      <TextField fx:id="name" onAction="#aktualisieren" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-      <TextField fx:id="vorname" onAction="#aktualisieren" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-      <TextField fx:id="geschlecht" onAction="#aktualisieren" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+      <TextField fx:id="name" onAction="#aktualisieren" prefHeight="25.0" prefWidth="550.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+      <TextField fx:id="vorname" onAction="#aktualisieren" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+      <TextField fx:id="geschlecht" onAction="#aktualisieren" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="6" />
       <TextField fx:id="titel" onAction="#aktualisieren" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-      <TextField fx:id="anrede" onAction="#aktualisieren" GridPane.columnIndex="2" GridPane.rowIndex="8" />
-      <TextField fx:id="briefanrede" onAction="#aktualisieren" GridPane.columnIndex="2" GridPane.rowIndex="9" />
-      <Button fx:id="btnSave" mnemonicParsing="false" onAction="#speichern" text="Speichern" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="10" />
-      <Button fx:id="btnAddTitel" mnemonicParsing="false" onAction="#addTitel" text="Titel hinzufügen" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="12" />
-      <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="11" />
-      <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+      <TextField fx:id="anrede" onAction="#aktualisieren" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+      <TextField fx:id="briefanrede" onAction="#aktualisieren" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="9" />
+      <Button fx:id="btnSave" mnemonicParsing="false" onAction="#speichern" text="Speichern" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="10" />
+      <Button fx:id="btnAddTitel" mnemonicParsing="false" onAction="#addTitel" text="Titel hinzufügen" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="12" />
+      <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="11" />
+      <Separator prefHeight="3.0" prefWidth="692.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+      <Button fx:id="btnLearnTitle" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Hinzufügen" GridPane.columnIndex="3" GridPane.rowIndex="7" />
    </children>
 </GridPane>
