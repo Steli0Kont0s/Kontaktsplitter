@@ -15,6 +15,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -82,6 +84,15 @@ public class MainWindowController {
         stage.setTitle("Titel Hinzufügen");
         stage.setScene(new Scene(root1));
         stage.show();
+    }
+
+    @FXML
+    private void learnTitel() throws IOException {
+        String titels = titel.getText();
+        List<String> list = new ArrayList<>(Arrays.asList(titels.split(" ")));
+        for(String item:list){
+            TitelList.addTitel(item);
+        }
     }
 
     /**

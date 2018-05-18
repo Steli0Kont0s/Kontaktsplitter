@@ -53,6 +53,6 @@
       <Button fx:id="btnAddTitel" mnemonicParsing="false" onAction="#addTitel" text="Titel hinzufügen" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="12" />
       <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="11" />
       <Separator prefHeight="3.0" prefWidth="692.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3" />
-      <Button fx:id="btnLearnTitle" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Hinzufügen" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+      <Button fx:id="btnLearnTitle" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#learnTitel" text="Hinzufügen" GridPane.columnIndex="3" GridPane.rowIndex="7" />
    </children>
 </GridPane>
