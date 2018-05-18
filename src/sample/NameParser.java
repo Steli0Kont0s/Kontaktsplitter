@@ -39,11 +39,23 @@ public class NameParser {
      * Vorname aus Strings extrahieren
      */
     private static void setSurname(){
+        String surnames = "";
         String names = "";
+        boolean von = false;
         for(String item:list){
-           names = names + toUpperCase(item) + " ";
+            if(item.contentEquals("von") || item.contentEquals("van")){
+                von = true;
+            }
+            if(von){
+                names = names + item + " ";
+            }
+            else{
+                surnames = surnames + toUpperCase(item) + " ";
+            }
+
         }
-        kontakt.setVorname(names);
+        kontakt.setName(names + kontakt.getName());
+        kontakt.setVorname(surnames);
     }
 
     /**
@@ -60,6 +72,7 @@ public class NameParser {
         }
         kontakt.setTitel(titels);
     }
+
 
     /**
      * Anrede ermitteln
